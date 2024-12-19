@@ -3,6 +3,8 @@ package com.example.currencyconvertorapp
 import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
+import android.view.Menu
+import android.view.MenuItem
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
@@ -62,6 +64,19 @@ class MainActivity : AppCompatActivity() {
             startActivity(implicitIntent)
         }
     }
+    //menu
+    override fun onCreateOptionsMenu(menu: Menu?): Boolean {
+        menuInflater.inflate(R.menu.my_menu,menu)
+        return true
+    }
+    //function on selected menu
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        if (item.itemId.equals(R.id.new_note)){
+            Toast.makeText(this,"You Selected a new note",Toast.LENGTH_LONG).show()
+        }
+        return super.onOptionsItemSelected(item)
+    }
+
     fun convert(value: Double): Double {
         return value * 84.91
     }
