@@ -47,11 +47,10 @@ class MainActivity : AppCompatActivity() {
         //Type of intents:
         //1. Emplicit Intent:
         myButton2.setOnClickListener {
-            var ExplicitIntent = Intent(this, MainActivity2::class.java)
-            startActivity(ExplicitIntent)
+            var explicitIntent = Intent(this, MainActivity2::class.java)
 
-            ExplicitIntent.putExtra("myName","Arya")
-
+            explicitIntent.putExtra("myName","Astitva")
+            startActivity(explicitIntent)
         }
         //2. Implicit Intent
 
@@ -62,13 +61,7 @@ class MainActivity : AppCompatActivity() {
             )
             startActivity(implicitIntent)
         }
-
-
-
-
-
     }
-
     fun convert(value: Double): Double {
         return value * 84.91
     }
@@ -102,9 +95,4 @@ class MainActivity : AppCompatActivity() {
         super.onDestroy()
         Toast.makeText(this, "onDestroy method is called", Toast.LENGTH_LONG).show()
     }
-
-
-
-
-
 }
