@@ -14,6 +14,7 @@ class MainActivity2 : AppCompatActivity() {
     lateinit var myTextView: TextView
     lateinit var myTextView2: TextView
     lateinit var myButton4: Button
+    lateinit var myButton5: Button
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -22,6 +23,7 @@ class MainActivity2 : AppCompatActivity() {
         myTextView = findViewById(R.id.textView3)
         myTextView2= findViewById(R.id.textView4)
         myButton4 = findViewById(R.id.button4)
+        myButton5 = findViewById(R.id.button5)
 
         //Receive data from the Intent
        val receivedData = intent.getStringExtra("myName")
@@ -38,6 +40,11 @@ class MainActivity2 : AppCompatActivity() {
             if (receivedData != null) {
                 shareResult(receivedData,randomNumber)
             }
+        }
+
+        myButton5.setOnClickListener{
+            var i = Intent(this,MainActivity3::class.java)
+            startActivity(i)
         }
 
 
