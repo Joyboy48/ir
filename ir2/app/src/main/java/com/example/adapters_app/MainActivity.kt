@@ -15,7 +15,7 @@ class MainActivity : AppCompatActivity() {
         val listView = findViewById<ListView>(R.id.listView)
 
         //2 Data source
-         val list = arrayOf(
+         val list = listOf(
              "A","B","C","D","E","A",
              "B","C","D","E","A","B",
              "C","D","E","A","B","C",
@@ -24,14 +24,16 @@ class MainActivity : AppCompatActivity() {
          )
 
         //3 Adapter
-        val myAdapter = ArrayAdapter(
-            this,
-            android.R.layout.simple_list_item_1,
-            list
-        )
+//        val myAdapter = ArrayAdapter(
+//            this,
+//            android.R.layout.simple_list_item_1,
+//            list
+//        )
+
+        val customAdapter = MyCustomAdapter(this,list)
 
         //4 Set adaptor to list view
-        listView.adapter = myAdapter
+        listView.adapter = customAdapter
 
 
     }
