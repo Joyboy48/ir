@@ -179,7 +179,7 @@ class MainActivity3 : AppCompatActivity() {
     fun displayProgressBar(){
         val progressBar = findViewById<ProgressBar>(R.id.progressBar)
 
-        
+
     }
 
 
