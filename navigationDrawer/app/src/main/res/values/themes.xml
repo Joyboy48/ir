@@ -6,4 +6,8 @@
     </style>
 
     <style name="Theme.NavigationDrawer" parent="Base.Theme.NavigationDrawer" />
+<!-- styles.xml -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- ... your theme styles ... -->
+    </style>
 </resources>
